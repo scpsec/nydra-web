@@ -1,0 +1,23 @@
+/* Custom CSS styling for SCPSEC */
+
+body {
+  background-color: #fdfdfd;
+  color: #676768;
+}
+
+.badge-soon {
+  background-color: #f3f4f6;
+  color: #676768;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.badge-soon:hover {
+  background-color: #0b3567;
+  color: #ffffff;
+  border-color: #0b3567;
+}
+
+#toast {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+}

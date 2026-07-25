@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>SCPSEC — Secure Cyber Protection & Security Ecosystem</title>
+  <meta name="title" content="SCPSEC — Secure Cyber Protection & Security Ecosystem">
+  <meta name="description" content="SCPSEC is an open and next-gen cybersecurity ecosystem building developer-first tools across Operating Systems, AI, Cloud Infrastructure, and Security.">
+  <meta name="keywords" content="SCPSEC, Cybersecurity, Linux, Open Source, Operating System, AI, Cloud, Security, Nydra OS">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="SCPSEC Team">
+  <link rel="canonical" href="https://github.com/scpsec/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/scpsec/">
+  <meta property="og:title" content="SCPSEC — Secure Cyber Protection & Security Ecosystem">
+  <meta property="og:description" content="An open and next-gen cybersecurity ecosystem spanning Operating Systems, AI, Cloud Infrastructure, and Security.">
+  <meta property="og:image" content="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
+  <meta property="og:site_name" content="SCPSEC">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://github.com/scpsec/">
+  <meta property="twitter:title" content="SCPSEC — Secure Cyber Protection & Security Ecosystem">
+  <meta property="twitter:description" content="An open and next-gen cybersecurity ecosystem spanning Operating Systems, AI, Cloud Infrastructure, and Security.">
+  <meta property="twitter:image" content="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBg: '#fdfdfd',
+            brandText: '#676768',
+            brandPrimary: '#0b3567',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (Schema.org JSON-LD for Search Engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SCPSEC",
+    "url": "https://github.com/scpsec/",
+    "logo": "https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true",
+    "sameAs": [
+      "https://github.com/scpsec/"
+    ],
+    "description": "Secure Cyber Protection & Security Ecosystem. Open-source ecosystem building Operating Systems, AI tools, and Security Infrastructure."
+  }
+  </script>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-gray-200 selection:text-gray-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
+        <img 
+          src="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true" 
+          alt="SCPSEC Logo" 
+          class="w-10 h-10 rounded-full object-cover transition-transform group-hover:scale-105"
+        />
+        <div>
+          <span class="font-extrabold text-2xl tracking-tight text-brandPrimary block leading-none">SCPSEC</span>
+          <span class="text-[10px] text-brandText font-mono tracking-widest uppercase">Ecosystem</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 text-brandText border border-gray-200 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Open Source Security Initiative
+        </span>
+        
+        <!-- GitHub Button -->
+        <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-xl bg-brandPrimary text-white text-sm font-medium hover:bg-black transition-all shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-16 pb-12 px-6 max-w-7xl mx-auto text-center border-b border-gray-200">
+    <span class="inline-block py-1 px-4 rounded-full text-xs font-mono font-semibold tracking-wider uppercase bg-slate-100 text-brandPrimary border border-gray-200 mb-6">
+      Secure Cyber Protection & Security Ecosystem
+    </span>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brandPrimary max-w-4xl mx-auto leading-tight">
+      An Open & Next-Gen Cyber Ecosystem.
+    </h1>
+    <p class="mt-5 text-base md:text-lg text-brandText max-w-2xl mx-auto font-normal">
+      Building transparent, developer-first, and community-driven security tools spanning Operating Systems, AI, Cloud Infrastructure, and Cyber Protection.
+    </p>
+
+    <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+      <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-brandPrimary text-white font-medium hover:bg-black transition-all flex items-center gap-2 shadow-md">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Explore Repositories
+      </a>
+    </div>
+  </section>
+
+  <!-- Ecosystem Matrix Grid -->
+  <main class="py-12 px-6 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- 🖥️ 1. Operating Systems -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>🖥️</span> Operating Systems
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra OS <span class="text-xs text-gray-400">(Desktop)</span></span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra OS (Desktop)">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Server</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Server">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 🤖 2. AI Suite -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>🤖</span> AI Suite
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra AI <span class="text-xs text-gray-400">(Chatbot)</span></span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra AI">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Vision</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Vision">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Voice</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Voice">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Code</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Code">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Translate</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Translate">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ☁️ 3. Cloud Ecosystem -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>☁️</span> Cloud Ecosystem
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Cloud</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Cloud">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Sync</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Sync">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Drive</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Drive">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 👨‍💻 4. Developer Tools -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>👨‍💻</span> Developer Hub
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra SDK & API</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra SDK & API">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra CLI</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra CLI">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Documentation</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Documentation">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Developer Portal</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Developer Portal">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 🎨 5. Creative Suite -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>🎨</span> Creative Suite
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Studio</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Studio">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Photo & Video</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Photo & Video">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Music</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Music">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 🔒 6. Security -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>🔒</span> Security & Shield
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra VPN & Auth</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra VPN & Auth">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Password Manager</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Password Manager">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Shield</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Shield">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 🌐 7. Web Experience -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>🌐</span> Web Experience
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Browser & Mail</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Browser & Mail">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Search</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Search">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra Pages <span class="text-xs text-gray-400">(Hosting)</span></span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra Pages">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 💬 8. Community -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>💬</span> Community & News
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Forum & Discord</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Forum & Discord">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Blog & News</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Blog & News">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Public Roadmap</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Public Roadmap">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 📥 9. Download Center -->
+    <div class="bg-white p-7 rounded-2xl border border-gray-200 hover:border-brandPrimary transition-all shadow-sm">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold text-brandPrimary flex items-center gap-2.5">
+          <span>📥</span> Download Center
+        </h2>
+      </div>
+      <ul class="space-y-3.5">
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Nydra OS ISO</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Nydra OS ISO">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Official Wallpapers</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Official Wallpapers">Coming Soon</button>
+        </li>
+        <li class="flex items-center justify-between text-sm text-brandText">
+          <span>Themes & Icon Packs</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" data-item="Themes & Icon Packs">Coming Soon</button>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Support Section -->
+  <section class="py-8 px-6 max-w-7xl mx-auto w-full">
+    <div class="bg-blue-50/60 p-8 rounded-2xl border border-blue-200/60 text-center">
+      <h3 class="text-lg font-bold text-brandPrimary mb-2 flex items-center justify-center gap-2">
+        <span>🛡️</span> Support the SCPSEC Open Source Project
+      </h3>
+      <p class="text-sm text-brandText mb-4 max-w-xl mx-auto">
+        If you believe in our cybersecurity vision, consider supporting our ongoing digital research and infrastructure development via Bitcoin.
+      </p>
+
+      <div class="inline-flex items-center gap-2 bg-white px-4 py-2.5 rounded-xl border border-blue-200 shadow-sm max-w-full overflow-x-auto">
+        <span class="text-brandPrimary font-bold text-xs font-mono">BTC:</span>
+        <a href="bitcoin:bc1q5h9sq4jf7tmca42r3c53ahrsa08ev6u7menpkp" class="text-xs font-mono font-semibold text-brandText hover:text-brandPrimary transition-colors break-all underline decoration-blue-300 underline-offset-2">
+          bc1q5h9sq4jf7tmca42r3c53ahrsa08ev6u7menpkp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-brandPrimary text-white px-5 py-3 rounded-xl shadow-xl opacity-0 translate-y-10 pointer-events-none flex items-center gap-2 text-sm z-50">
+    <span>🛡️</span>
+    <span id="toastMessage">Feature coming soon!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 py-10 bg-white mt-8 text-center text-brandText text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="font-bold text-brandPrimary hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.</p>
+      
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="hover:text-brandPrimary transition-colors flex items-center gap-1.5 font-medium">
+          <span>GitHub Repository</span>
+          &rarr;
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
