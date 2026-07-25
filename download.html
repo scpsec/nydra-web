@@ -3,170 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Download Nydra OS 1.0 — SCPSEC Ecosystem</title>
-  <meta name="title" content="Download Nydra OS 1.0 — SCPSEC Ecosystem">
-  <meta name="description" content="Download Nydra OS 1.0 Desktop ISO (amd64). Open-source, developer-first operating system built for security and privacy.">
+
+  <!-- SEO & Meta Tags -->
+  <title>Download SCPSEC OS — Debian-Based Linux Distribution</title>
+  <meta name="description" content="Download SCPSEC OS ISO, view live session credentials, learn how it is built on Debian & Calamares, or build your own OS using SCPSEC OS Builder.">
+  <meta name="keywords" content="SCPSEC OS, Debian Linux, SCPSEC OS Builder, Calamares Installer, Linux Distribution">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/scpsec/scpsec-os-builder">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/logo_circle.png">
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBg: '#fdfdfd',
-            brandText: '#676768',
-            brandPrimary: '#0b3567',
-          }
-        }
-      }
-    }
-  </script>
 
-  <!-- Custom External CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-bg{
+    background-image:
+        linear-gradient(to bottom, rgba(15,23,42,.88), rgba(15,23,42,.96)),
+        url("https://raw.githubusercontent.com/scpsec/scpsec-logo/main/blackhole.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+  </style>
 </head>
-<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-gray-200 selection:text-gray-900 bg-cover bg-center bg-fixed bg-no-repeat relative" style="background-image: url('https://raw.githubusercontent.com/scpsec/scpsec-logo/main/blackhole.jpg');">
-  
-  <!-- Dark overlay -->
-  <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-[3px] -z-10"></div>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img 
-          src="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/logo_circle.png" 
-          alt="SCPSEC Logo" 
-          class="w-10 h-10 rounded-full object-cover transition-transform group-hover:scale-105"
-        />
-        <div>
-          <span class="font-extrabold text-2xl tracking-tight text-white block leading-none">SCPSEC</span>
-          <span class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Download Center</span>
-        </div>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between hero-bg selection:bg-cyan-500 selection:text-black">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <a href="index.html" class="flex items-center gap-3">
+      <div>
+        <span class="font-bold text-2xl tracking-tight text-white block leading-none">
+          SCPSEC OS
+        </span>
+        <span class="text-[11px] text-cyan-400 font-mono tracking-widest uppercase">
+          Debian-Based Linux Distribution
+        </span>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="index.html"
+         class="text-sm font-medium text-slate-300 hover:text-white transition">
+        ← Back to Home
       </a>
 
-      <div class="flex items-center gap-4">
-        <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-1">
-          &larr; Back to Ecosystem
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content Area -->
-  <main class="py-12 px-6 max-w-5xl mx-auto w-full flex-grow">
-    
-    <!-- Title Badge -->
-    <div class="text-center mb-10">
-      <span class="inline-block py-1 px-4 rounded-full text-xs font-mono font-semibold tracking-wider uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-4 backdrop-blur-md">
-        Official Release
-      </span>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-        Download Nydra OS 1.0 Desktop
-      </h1>
-      <p class="mt-3 text-slate-300 max-w-2xl mx-auto text-base">
-        A lightweight, secure, and developer-oriented live distribution built on top of custom Debian Live-Build tools.
-      </p>
-    </div>
-
-    <!-- Main Download Card -->
-    <div class="bg-slate-900/90 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl mb-10">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
-        <div>
-          <h2 class="text-2xl font-bold text-white flex items-center gap-3">
-            <span>Nydra OS 1.0 Desktop</span>
-            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">amd64 (64-bit)</span>
-          </h2>
-          <p class="text-sm text-slate-400 mt-2">
-            Build Date: <strong class="text-slate-200 font-mono">2026.07.25</strong> • Host: <strong class="text-slate-200">SourceForge</strong>
-          </p>
-        </div>
-
-        <!-- DIRECT SOURCEFORGE BUTTON -->
-        <a href="https://sourceforge.net/projects/scpsec-os/files/Nydra-OS-1.0-Desktop-amd64-2026.07.25.iso/download" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold transition-all flex items-center gap-3 shadow-lg shadow-emerald-500/25 text-base shrink-0">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v7.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 10.586V3a1 1 0 011-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/></svg>
-          Download ISO File
-        </a>
-      </div>
-
-      <!-- Screenshots Preview -->
-      <div class="mt-8">
-        <h3 class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
-          <span>📸</span> Interface Screenshots
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="group relative rounded-xl overflow-hidden border border-slate-700 bg-slate-950 shadow-md">
-            <img 
-              src="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/home.png" 
-              alt="Nydra OS Home Screen" 
-              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
-            <span class="absolute bottom-3 left-3 text-xs font-mono bg-black/80 text-emerald-400 px-3 py-1 rounded-md border border-white/10">
-              Home Screen
-            </span>
-          </div>
-
-          <div class="group relative rounded-xl overflow-hidden border border-slate-700 bg-slate-950 shadow-md">
-            <img 
-              src="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/desktop.png" 
-              alt="Nydra OS Desktop Environment" 
-              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
-            <span class="absolute bottom-3 left-3 text-xs font-mono bg-black/80 text-emerald-400 px-3 py-1 rounded-md border border-white/10">
-              Desktop Environment
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- System Requirements / Instructions -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-800 text-slate-300">
-        <h4 class="text-white font-bold mb-3 flex items-center gap-2">
-          <span>⚙️</span> Minimum Requirements
-        </h4>
-        <ul class="text-sm space-y-2 list-disc list-inside text-slate-400">
-          <li>64-bit x86 Processor (amd64)</li>
-          <li>2 GB RAM (4 GB recommended)</li>
-          <li>8 GB free disk space (if installing)</li>
-          <li>USB Drive with 4GB+ capacity for Live Boot</li>
-        </ul>
-      </div>
-
-      <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-800 text-slate-300">
-        <h4 class="text-white font-bold mb-3 flex items-center gap-2">
-          <span>🚀</span> Quick Installation Tip
-        </h4>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          Flash the downloaded ISO image directly to a USB drive using <strong>Rufus</strong>, <strong>BalenaEtcher</strong>, or via terminal using <code>dd</code>:
-        </p>
-        <code class="block mt-3 p-2.5 bg-slate-950 rounded border border-slate-800 text-xs font-mono text-emerald-400">
-          sudo dd if=Nydra-OS-1.0.iso of=/dev/sdX status=progress
-        </code>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-white/10 py-8 bg-slate-950/90 backdrop-blur-md text-center text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="font-bold text-white hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.</p>
-      
-      <a href="index.html" class="hover:text-white transition-colors text-xs font-mono">
-        Return to Home Page &rarr;
+      <a href="https://github.com/scpsec/scpsec-os-builder"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm font-medium hover:bg-slate-700 transition">
+        OS Builder GitHub
       </a>
     </div>
-  </footer>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="max-w-6xl mx-auto px-6 py-12 w-full space-y-16">
+
+<!-- Hero -->
+<section class="text-center space-y-6 pt-6">
+
+<span class="inline-block py-1.5 px-4 rounded-full text-xs font-mono font-semibold tracking-wider uppercase bg-cyan-950/80 text-cyan-300 border border-cyan-800">
+Official Live ISO
+</span>
+
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+Download
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+SCPSEC OS
+</span>
+</h1>
+
+<p class="text-slate-300 max-w-2xl mx-auto text-base md:text-lg">
+A Debian-based Linux distribution with Calamares installer, custom desktop environment,
+security tools, and optimized performance.
+</p>
+
+<div class="pt-4 flex justify-center">
+
+<a href="https://sourceforge.net/projects/scpsec-os/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-lg hover:from-cyan-400 hover:to-blue-500 transition shadow-lg shadow-cyan-500/25 flex items-center gap-3">
+
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+<path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+</svg>
+
+Download ISO
+
+</a>
+
+</div>
+
+</section>
+
+<!-- Live Login -->
+
+<section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl">
+
+<h2 class="text-xl font-bold flex items-center gap-2 mb-4">
+🔑 Live Session Login Details
+</h2>
+
+<p class="text-slate-400 text-sm mb-6">
+Use these credentials while running the live ISO:
+</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+
+<div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 flex justify-between">
+<span class="text-xs font-mono text-slate-400 uppercase">Username</span>
+<code class="text-cyan-400 font-bold text-lg">scpsec</code>
+</div>
+
+<div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 flex justify-between">
+<span class="text-xs font-mono text-slate-400 uppercase">Password</span>
+<code class="text-cyan-400 font-bold text-lg">live</code>
+</div>
+
+</div>
+
+</section>
+
+<!-- Screenshots -->
+
+<section class="space-y-6">
+
+<div class="text-center">
+
+<h2 class="text-2xl font-bold">
+Screenshots
+</h2>
+
+<p class="text-slate-400 text-sm">
+Preview of the SCPSEC OS desktop and welcome screen.
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden group">
+
+<div class="p-3 bg-slate-950 border-b border-slate-800">
+<span class="text-xs font-mono text-slate-400">
+Desktop
+</span>
+</div>
+
+<a href="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/desktop.png" target="_blank">
+<img src="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/desktop.png"
+alt="Desktop"
+class="w-full group-hover:scale-105 transition duration-300">
+</a>
+
+</div>
+
+<div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden group">
+
+<div class="p-3 bg-slate-950 border-b border-slate-800">
+<span class="text-xs font-mono text-slate-400">
+Welcome Screen
+</span>
+</div>
+
+<a href="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/home.png" target="_blank">
+<img src="https://raw.githubusercontent.com/scpsec/scpsec-logo/main/home.png"
+alt="Welcome"
+class="w-full group-hover:scale-105 transition duration-300">
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Builder -->
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+
+<h2 class="text-xl font-bold mb-4">
+⚙️ About SCPSEC OS
+</h2>
+
+<p class="text-slate-300 text-sm leading-relaxed">
+SCPSEC OS is built using Debian Live-Build together with the Calamares installer.
+It includes custom branding, repositories, security tools, desktop customization,
+and an optimized installation experience.
+</p>
+
+</div>
+
+<div class="bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/50 border border-cyan-800 rounded-2xl p-6 flex flex-col justify-between">
+
+<div>
+
+<h2 class="text-xl font-bold">
+🛠️ Build Your Own OS
+</h2>
+
+<p class="text-slate-300 text-sm mt-3">
+Use the SCPSEC OS Builder to create your own Debian-based custom Linux distribution
+with just a few commands.
+</p>
+
+</div>
+
+<div class="pt-6">
+
+<a href="https://github.com/scpsec/scpsec-os-builder"
+target="_blank"
+rel="noopener noreferrer"
+class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400 transition">
+
+Use SCPSEC OS Builder
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+
+<footer class="border-t border-slate-800 py-8 bg-slate-950/80 text-center text-slate-500 text-sm">
+© SCPSEC — SCPSEC OS Project.
+</footer>
 
 </body>
 </html>
