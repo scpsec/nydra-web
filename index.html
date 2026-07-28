@@ -8,10 +8,13 @@
   <title>SCPSEC — Secure Cyber Protection & Security Ecosystem</title>
   <meta name="title" content="SCPSEC — Secure Cyber Protection & Security Ecosystem">
   <meta name="description" content="SCPSEC is an open and next-gen cybersecurity ecosystem building developer-first tools across Operating Systems, AI, Cloud Infrastructure, and Security.">
-  <meta name="keywords" content="SCPSEC, Cybersecurity, Linux, Open Source, Operating System, AI, Cloud, Security, Nydra OS">
+  <meta name="keywords" content="SCPSEC, Cybersecurity, Linux, Open Source, Operating System, AI, Cloud, Security, Scpsec OS">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="SCPSEC Team">
   <link rel="canonical" href="https://github.com/scpsec/">
+
+  <!-- Mastodon Link Header -->
+  <link rel="me" href="https://defcon.social/@scpsec">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
@@ -75,7 +78,7 @@
       border: 1px solid #e5e7eb;
       transition: all 0.2s ease;
     }
-    .badge-soon:hover {
+    .badge-soon:hover, .badge-soon:focus {
       background-color: #0b3567;
       color: #ffffff;
       border-color: #0b3567;
@@ -164,7 +167,7 @@
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Server</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Server')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Server')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -179,23 +182,23 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec AI <span class="text-xs text-gray-400">(Chatbot)</span></span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra AI')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec AI')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Vision</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Vision')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Vision')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Voice</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Voice')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Voice')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Code</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Code')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Code')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Translate</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Translate')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Translate')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -210,15 +213,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Cloud</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Cloud')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Cloud')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Sync</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Sync')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Sync')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Drive</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Drive')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Drive')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -233,19 +236,19 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec SDK & API</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra SDK & API')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec SDK & API')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec CLI</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra CLI')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec CLI')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Documentation</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Documentation')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Documentation')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Developer Portal</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Developer Portal')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Developer Portal')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -260,15 +263,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Studio</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Studio')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Studio')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Photo & Video</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Photo & Video')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Photo & Video')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Music</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Music')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Music')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -283,15 +286,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec VPN & Auth</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra VPN & Auth')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec VPN & Auth')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Password Manager</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Password Manager')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Password Manager')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Shield</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Shield')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Shield')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -306,15 +309,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Browser & Mail</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Browser & Mail')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Browser & Mail')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Search</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Search')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Search')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec Pages <span class="text-xs text-gray-400">(Hosting)</span></span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra Pages')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec Pages')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -329,15 +332,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Forum & Discord</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Forum & Discord')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Forum & Discord')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Blog & News</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Blog & News')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Blog & News')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Public Roadmap</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Public Roadmap')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Public Roadmap')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -352,15 +355,15 @@
       <ul class="space-y-3.5">
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Scpsec OS ISO</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Nydra OS ISO')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Scpsec OS ISO')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Official Wallpapers</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Official Wallpapers')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Official Wallpapers')">Coming Soon</button>
         </li>
         <li class="flex items-center justify-between text-sm text-brandText">
           <span>Themes & Icon Packs</span>
-          <span class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Themes & Icon Packs')">Coming Soon</span>
+          <button type="button" class="badge-soon text-[10px] px-2.5 py-1 rounded-full font-mono cursor-pointer" onclick="notifySoon('Themes & Icon Packs')">Coming Soon</button>
         </li>
       </ul>
     </div>
@@ -395,7 +398,7 @@
   <!-- Footer -->
   <footer class="border-t border-gray-200 py-10 bg-white mt-8 text-center text-brandText text-sm">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 <a href="https://github.com/scpsec/" target="_blank" class="font-bold text-brandPrimary hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.</p>
+      <p>&copy; 2026 <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="font-bold text-brandPrimary hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.</p>
       
       <div class="flex items-center gap-6">
         <a href="https://x.com/scpseccompany" target="_blank" rel="noopener noreferrer" class="hover:text-brandPrimary transition-colors flex items-center gap-1.5 font-medium">
