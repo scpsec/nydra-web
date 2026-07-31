@@ -11,14 +11,14 @@
   <meta name="keywords" content="SCPSEC Login, SCPSEC Register, SCPSEC Account, Cybersecurity Portal, Scpsec OS, Open Source Security Auth">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="SCPSEC Team">
-  <link rel="canonical" href="https://github.com/scpsec/">
+  <link rel="canonical" href="https://scpsec.cc/login.html">
 
-  <!-- Mastodon Header -->
+  <!-- Social Header Links -->
   <link rel="me" href="https://defcon.social/@scpsec">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com/scpsec/">
+  <meta property="og:url" content="https://scpsec.cc/login.html">
   <meta property="og:title" content="Reserve Your Account — SCPSEC Ecosystem">
   <meta property="og:description" content="Securely authenticate or reserve your developer account in the SCPSEC open security database.">
   <meta property="og:image" content="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
@@ -31,27 +31,27 @@
   <meta property="twitter:description" content="Securely authenticate or reserve your developer account in the SCPSEC open security database.">
   <meta property="twitter:image" content="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
 
-  <!-- Structured Data (Schema.org JSON-LD for WebPage & LoginAction) -->
+  <!-- Structured Data (Schema.org JSON-LD for WebPage & Organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://github.com/scpsec/#login",
-        "url": "https://github.com/scpsec/",
+        "@id": "https://scpsec.cc/login.html#login",
+        "url": "https://scpsec.cc/login.html",
         "name": "Reserve Account & Login — SCPSEC Ecosystem",
         "isPartOf": {
           "@type": "WebSite",
           "name": "SCPSEC",
-          "url": "https://github.com/scpsec/"
+          "url": "https://scpsec.cc/"
         },
         "description": "Account reservation and authentication portal for SCPSEC Ecosystem."
       },
       {
         "@type": "Organization",
         "name": "SCPSEC",
-        "url": "https://github.com/scpsec/",
+        "url": "https://scpsec.cc/",
         "logo": "https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true",
         "sameAs": [
           "https://github.com/scpsec/",
@@ -64,6 +64,9 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://github.com/scpsec/scpsec-logo/blob/main/logo_circle.png?raw=true">
+
+  <!-- reCAPTCHA Enterprise Script -->
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld19W0tAAAAAClr_9y1G9SQ1lFuKpD7jyw-i2LT"></script>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -134,7 +137,7 @@
       <form id="authForm" class="space-y-4" aria-label="Email Authentication Form">
         <div>
           <label for="email" class="block text-xs font-semibold text-brandPrimary mb-1 uppercase tracking-wider">Email Address</label>
-          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@email" class="w-full px-3.5 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brandPrimary transition-colors">
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="developer@scpsec.org" class="w-full px-3.5 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brandPrimary transition-colors">
         </div>
         <div>
           <label for="password" class="block text-xs font-semibold text-brandPrimary mb-1 uppercase tracking-wider">Password</label>
@@ -161,12 +164,16 @@
 
   <!-- Footer -->
   <footer class="border-t border-gray-200 py-6 text-center text-xs text-brandText bg-white">
-    &copy; 2026 <a href="https://github.com/scpsec/" target="_blank" rel="noopener noreferrer" class="font-bold text-brandPrimary hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.
+    &copy; 2026 <a href="https://scpsec.cc/" target="_blank" rel="noopener noreferrer" class="font-bold text-brandPrimary hover:underline">SCPSEC</a> — Secure Cyber Protection & Security Ecosystem.
   </footer>
 
-  <!-- Firebase Logic -->
+  <!-- Firebase Logic + App Check Integration -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { 
+      initializeAppCheck, 
+      ReCaptchaEnterpriseProvider 
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
     import { 
       getAuth, 
@@ -186,7 +193,15 @@
       measurementId: "G-W79M79ZWG1"
     };
 
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
+
+    // Initialize Firebase App Check with reCAPTCHA Enterprise
+    const appCheck = initializeAppCheck(app, {
+      provider: new ReCaptchaEnterpriseProvider('6Ld19W0tAAAAAClr_9y1G9SQ1lFuKpD7jyw-i2LT'),
+      isTokenAutoRefreshEnabled: true
+    });
+
     const analytics = getAnalytics(app);
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
@@ -208,6 +223,7 @@
       e.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
+
       try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         showAlert(`Welcome back ${userCredential.user.email}! Account verified in scpsec database.`, false);
@@ -220,10 +236,12 @@
     document.getElementById('signUpBtn').addEventListener('click', async () => {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
+
       if (!email || !password) {
         showAlert('Please fill in both Email and Password fields.');
         return;
       }
+
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         showAlert(`Account reserved successfully in scpsec database for ${userCredential.user.email}!`, false);
